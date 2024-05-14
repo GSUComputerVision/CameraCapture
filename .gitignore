@@ -1,0 +1,10 @@
+.venv
+venv
+venv/
+*.pt
+*.jpg
+*.jpeg
+!sources/*.jpg
+!sources/*.jpeg
+runs
+runs/
