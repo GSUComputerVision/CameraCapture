@@ -8,10 +8,7 @@ results = model(source='0', show=True, conf=0.4, save=False, classes=[0, 11], sa
 
 for point in results:
     result: Results = point
-    im_array = result.plot()
-    im = Image.fromarray(im_array[:, :, ::-1])
     var = result.boxes
-
-    print("This is my var", var)
+    print(var, "\n")
 
 print('Done')
