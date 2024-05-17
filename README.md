@@ -7,6 +7,7 @@ Repository for handling the Camera Input
 * picInference.py -> Python script to infer results from picture source
 * vidInference.py -> Python script to infer results from video capture
 * vidTrack.py -> Python script to track object that we've identified in the picture
+* main.py -> Allows us to pull in the frames from the inference file and put it in a queue for other processes to interact with.
 
 Steps for Recreation
 
