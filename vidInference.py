@@ -2,10 +2,11 @@ from ultralytics import YOLO
 from ultralytics.engine.results import Results
 from multiprocessing import Queue
 
-def videoInference(queue):
+
+def videoInference(queue, source='0'):
     model = YOLO('yolov8n.pt')
 
-    results = model(source='0', show=True, conf=0.4, save=False, classes=[0, 11], save_txt=False, stream=True)
+    results = model(source=source, show=True, conf=0.4, save=False, classes=[0, 11], save_txt=False, stream=True)
 
     classes = {0: 'person', 11: 'stop-sign'}
 
@@ -13,8 +14,7 @@ def videoInference(queue):
         boxes = frame.boxes
         queue.put(boxes)
 
-    print('Done')
 
 if __name__ == '__main__':
-    queue = Queue()
-    videoInference(queue)
+    queueObj = Queue()
+    videoInference(queueObj)
