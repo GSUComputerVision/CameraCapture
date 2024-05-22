@@ -4,6 +4,7 @@ venv/
 *.pt
 *.jpg
 *.jpeg
+*.mp4
 !sources/*.jpg
 !sources/*.jpeg
 runs

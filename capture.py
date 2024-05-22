@@ -1,6 +1,6 @@
 import cv2 as cv
 
-vid = cv.VideoCapture(0)
+vid = cv.VideoCapture(0, cv.CAP_DSHOW)
 
 while True:
     ret, frame = vid.read()
